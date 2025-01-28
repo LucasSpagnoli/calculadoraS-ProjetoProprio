@@ -1,0 +1,36 @@
+body{
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+}
+div#calculadora {
+    background-color: white;
+    width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.473);
+}
+input.butN{
+    background-color: gray;
+    color: white;
+    width: 60px;
+    height: 40px;
+    font-size: 16pt;
+}
+input.butO{
+    background-color: gray;
+    color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 16pt;
+}
+textarea#res1{
+    width: 540px;
+    margin: 20px auto;
+    height: 50px;
+    background-color: lightgray;
+    font-size: 40px;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 10px;
+}
