@@ -1,26 +1,38 @@
 let nums=[]
 let res = document.querySelector('textarea#res1')
-let numtxt = ''
 let operacao = ''
 let final = 0
-function num(x){
-    res.innerHTML+=x
-    numtxt+=x
+let check = 0
+function num(x){ 
+    if (res.value !=0 && check == 0){
+        res.value=''
+        res.value+=x
+    } else {
+        res.value+=x
+    }
+    check++
 }
 function soma(){
-    var visor = Number(numtxt)
+    var visor = Number(res.value)
     nums.push(visor)
-    res.innerHTML=''
-    numtxt=''
+    res.value=''
     operacao = 'soma'
+    window.alert(nums)
 }
 function igual(){
-    var visor = Number(numtxt)
+    if (check!=0){
+    var visor = Number(res.value)
     nums.push(visor)
     if (operacao == 'soma'){
-        final = nums[0]+nums[1]
-        res.innerHTML=final
+        for (let i = 0; i < nums.length; i++) {
+            final += nums[i]
+        }
+        res.value=final
+        nums.length=0
     } else {
         window.alert('nah')
     }
+    check = 0
+    }
+    final=0
 }
