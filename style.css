@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.rubik-rubics {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 14pt;
+    font-style: normal;
+}
+  @font-face {
+    font-family: 'Dune';
+    src: url(mídia/Dune_Rise.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
 body{
     background-color: skyblue;
     color: white;
@@ -5,28 +18,25 @@ body{
 }
 div#calculadora {
     background-color: white;
-    width: 600px;
+    width: 550px;
     margin: auto;
     border-radius: 10px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.473);
+    height: 700px;
 }
-input.butN{
-    background-color: gray;
+input.but{
+    background-color: skyblue;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.562);
     color: white;
-    width: 60px;
-    height: 40px;
-    font-size: 16pt;
-    
-}
-input.butO{
-    background-color: gray;
-    color: white;
-    width: 60px;
+    width: 80px;
     height: 60px;
-    font-size: 16pt;
+    font-size: 18pt;
+    margin: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+    font-family: 'Dune';
 }
 textarea#res1{
-    width: 540px;
+    width: 490px;
     margin: 20px auto;
     height: 50px;
     background-color: lightgray;
@@ -34,4 +44,19 @@ textarea#res1{
     text-align: right;
     padding-right: 20px;
     padding-top: 10px;
+    resize: none;
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.384);
+    border-radius: 5px;
+    font-family: "Rubik";
+}
+input#zero{
+    background-color: skyblue;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.562);
+    color: white;
+    width: 80px;
+    height: 60px;
+    font-size: 18pt;
+    margin: 5px 103px 5px 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+    font-family: 'Dune';
 }
