@@ -32,8 +32,15 @@ function operar(x){
         igual()
     }
 }
+function sinal(){
+    res.value=(-res.value)
+}
+function ponto(){
+    if (!res.value.includes('.')){
+        res.value+='.'
+    }
+}
 function igual(){
-
     if (check!=0 && operacao!='fatorial' && operacao!='raiz'){
     var visor = Number(res.value)
     nums.push(visor)
@@ -88,6 +95,27 @@ function igual(){
         res.value=final
         nums.length=0
     }
-    check = 0
+    check=0
     final=0
+}
+function config(){
+    var lugar = document.querySelector ('div#calculadora')
+    var corpo = document.querySelector('body')
+    var Esc = document.createElement('input')
+    Esc.type= 'button'
+    Esc.value='Escuro'
+    Esc.className='but'
+    Esc.style.fontSize= '14pt'
+    Esc.addEventListener('click', function(){
+        var butEsc = document.querySelectorAll('.but')
+        butEsc.forEach(function (botao) {
+            botao.classList.remove('but');
+            botao.classList.add('butEsc');
+        lugar.style.background='gray'
+        corpo.style.background='darkslateblue'
+        corpo.style.color='lightgray'
+    });
+}); 
+    
+    lugar.appendChild(Esc)
 }
